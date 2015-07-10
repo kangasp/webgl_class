@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)http://www.cs.unm.edu/~angel/COURSERA/CODE/EXAMPLES/gasket2.html -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Gasket</title>
+
+<script id="vertex-shader" type="x-shader/x-vertex">
+attribute vec4 vPosition;
+void main()    {  gl_Position = vPosition;  }
+</script>
+
+<script id="fragment-shader" type="x-shader/x-fragment">
+precision mediump float;
+void main()    { gl_FragColor = vec4( 1.0, 0.0, 0.0, 1.0 );  }
+</script>
+
+
+<script type="text/javascript" src="./gasket_files/webgl-utils.js"></script>
+<script type="text/javascript" src="./gasket_files/initShaders.js"></script>
+<script type="text/javascript" src="./gasket_files/MV.js"></script>
+<script type="text/javascript" src="./gasket_files/gasket2.js"></script>
+</head>   
+
+<body>
+
+<input type="text" id="input1" />
+<button onclick=update()>reload</button>
+<!---
+<button onclick="myJsFunction()"></button>
+<script type="text/javascript" src="./gasket_files/gasket2.>
+ function myJsFunction(){
+    var text=document.getElementById('input1').value;
+ }
+</script>
+--!>
+
+
+<canvas id="gl-canvas" width="512" height="512">
+Oops ... your browser doesn't support the HTML5 canvas element
+</canvas>
+
+
+
+</body></html>
