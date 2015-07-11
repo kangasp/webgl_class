@@ -2,7 +2,7 @@
 
 var canvas;
 var gl;
-var NumTimesToSubdivide = 2;
+var NumTimesToSubdivide = 1;
 
 window.onload = init
 
@@ -30,16 +30,9 @@ function init()
     gl.vertexAttribPointer( vPosition, 2, gl.FLOAT, false, 0, 0 );
     gl.enableVertexAttribArray( vPosition );
     
-    render( NumTimesToSubdivide );
+    render( NumTimesToSubdivide, 0 );
 
 };
-
-
-function update( i )
-{
-    alert(i);
-    render( 4 );
-}
 
 function divideTriangle( a, b, c, count, p )
 {
@@ -61,8 +54,9 @@ function divideTriangle( a, b, c, count, p )
     }
 }
 
-function render(num)
+function render(num, next)
 {
+    alert(next)
     //  Initialize our data for the Sierpinski Gasket
     // First, initialize the corners of our gasket with three points.
     var vertices = [

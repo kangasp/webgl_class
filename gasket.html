@@ -13,7 +13,7 @@ void main()    {  gl_Position = vPosition;  }
 
 <script id="fragment-shader" type="x-shader/x-fragment">
 precision mediump float;
-void main()    { gl_FragColor = vec4( 1.0, 0.0, 0.0, 1.0 );  }
+void main()    { gl_FragColor = vec4( 0.3, 0.3, 0.7, 1.0 );  }
 </script>
 
 
@@ -25,18 +25,10 @@ void main()    { gl_FragColor = vec4( 1.0, 0.0, 0.0, 1.0 );  }
 
 <body>
 
-<input type="text" id="input1" />
-<button onclick=update()>reload</button>
-<!---
-<button onclick="myJsFunction()"></button>
-<script type="text/javascript" src="./gasket2.>
- function myJsFunction(){
-    var text=document.getElementById('input1').value;
- }
-</script>
---!>
-
-
+<input type="text" id="depth" />
+<input type="text" id="next" />
+<button onclick="render(document.getElementById('depth').value, document.getElementById('next').value)">reload</button>
+<br>
 <canvas id="gl-canvas" width="512" height="512">
 Oops ... your browser doesn't support the HTML5 canvas element
 </canvas>
